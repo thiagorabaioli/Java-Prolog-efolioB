@@ -12,6 +12,18 @@ public class App {
     );
 
     System.out.println( "consult " + (q1.hasSolution() ? "succeeded" : "failed"));
+   
+    //child_of(joe,ralf)
+    Query q2 = 
+  new Query( 
+      "child_of", 
+      new Term[] {new Atom("joe"),new Atom("ralf")} 
+  );
+
+  System.out.println( 
+  "child_of(joe,ralf) is " + 
+  ( q2.hasSolution() ? "provable" : "not provable" ) 
+);
 
     }
 }
